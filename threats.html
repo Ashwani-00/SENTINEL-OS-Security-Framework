@@ -1,0 +1,52 @@
+<!-- THREATS -->
+<section id="threats">
+  <div class="reveal-left">
+    <span class="section-label">01 / Vulnerability Taxonomy</span>
+    <h2 class="section-title">KNOWN<br/>THREATS</h2>
+    <p class="section-desc">Five critical OS-level vulnerability classes, each with distinct attack vectors, detection signatures, and mitigation strategies.</p>
+  </div>
+  <div class="vuln-grid">
+    <div class="vuln-card danger reveal" style="transition-delay:.05s">
+      <span class="card-index">CVE CLASS 001</span>
+      <div class="card-icon">⚡</div>
+      <div class="card-title">BUFFER OVERFLOW</div>
+      <p class="card-desc">Overwrites adjacent memory by exceeding allocated buffer bounds, enabling control-flow hijacking via corrupted return addresses or function pointers.</p>
+      <span class="card-severity sev-critical">CRITICAL — CVSS 9.8</span>
+    </div>
+    <div class="vuln-card danger reveal" style="transition-delay:.1s">
+      <span class="card-index">CVE CLASS 002</span>
+      <div class="card-icon">🔓</div>
+      <div class="card-title">TRAPDOOR / BACKDOOR</div>
+      <p class="card-desc">Hidden authentication bypass mechanisms embedded in software or firmware, enabling persistent unauthorised access without triggering standard auth flows.</p>
+      <span class="card-severity sev-critical">CRITICAL — CVSS 9.1</span>
+    </div>
+    <div class="vuln-card warning reveal" style="transition-delay:.15s">
+      <span class="card-index">CVE CLASS 003</span>
+      <div class="card-icon">🌐</div>
+      <div class="card-title">CACHE POISONING</div>
+      <p class="card-desc">Injects malicious entries into DNS or web caches by exploiting predictable transaction IDs, redirecting users to attacker-controlled infrastructure.</p>
+      <span class="card-severity sev-high">HIGH — CVSS 8.2</span>
+    </div>
+    <div class="vuln-card danger reveal" style="transition-delay:.2s">
+      <span class="card-index">CVE CLASS 004</span>
+      <div class="card-icon">⛓</div>
+      <div class="card-title">ROP CHAIN</div>
+      <p class="card-desc">Return-Oriented Programming chains existing code gadgets to build arbitrary computation without injecting new code, defeating DEP and NX protections entirely.</p>
+      <span class="card-severity sev-critical">CRITICAL — CVSS 9.3</span>
+    </div>
+    <div class="vuln-card warning reveal" style="transition-delay:.25s">
+      <span class="card-index">CVE CLASS 005</span>
+      <div class="card-icon">⏱</div>
+      <div class="card-title">RACE CONDITION (TOCTOU)</div>
+      <p class="card-desc">Exploits the window between a security check and resource use, allowing attackers to swap checked resources before the operation completes — bypassing privilege checks.</p>
+      <span class="card-severity sev-high">HIGH — CVSS 7.8</span>
+    </div>
+    <div class="vuln-card reveal" style="transition-delay:.3s;border-style:dashed;opacity:.6;cursor:default;">
+      <span class="card-index">COMING SOON</span>
+      <div class="card-icon" style="opacity:.4">+</div>
+      <div class="card-title" style="color:var(--muted)">MORE VECTORS</div>
+      <p class="card-desc">Heap spraying, use-after-free, format string attacks, integer overflow, and privilege escalation modules in development.</p>
+      <span class="card-severity sev-medium">ROADMAP</span>
+    </div>
+  </div>
+</section>
