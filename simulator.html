@@ -1,0 +1,85 @@
+<!-- SIMULATOR -->
+<section id="simulator" style="padding-top:0;max-width:1200px;margin:0 auto;padding-left:48px;padding-right:48px;padding-bottom:100px;">
+  <div class="reveal-left">
+    <span class="section-label">02 / Attack Simulation Engine</span>
+    <h2 class="section-title">LIVE<br/>SIMULATOR</h2>
+    <p class="section-desc">Execute simulated attacks against the framework and observe real-time detection, alerting, and automated mitigation responses.</p>
+  </div>
+  <div class="simulator reveal" style="transition-delay:.1s">
+    <div class="sim-header">
+      <span class="sim-title">SENTINEL ATTACK SIMULATION ENGINE v2.4</span>
+      <div class="sim-controls">
+        <div class="sim-dot" style="background:#ff5f57"></div>
+        <div class="sim-dot" style="background:#ffbd2e"></div>
+        <div class="sim-dot" style="background:#28ca42"></div>
+      </div>
+    </div>
+    <div class="sim-body">
+      <div class="sim-sidebar">
+        <div class="sim-option active" data-vuln="buffer" onclick="selectVuln(this)">
+          <div class="sim-option-dot"></div>BUFFER OVERFLOW
+        </div>
+        <div class="sim-option" data-vuln="trapdoor" onclick="selectVuln(this)">
+          <div class="sim-option-dot"></div>TRAPDOOR
+        </div>
+        <div class="sim-option" data-vuln="cache" onclick="selectVuln(this)">
+          <div class="sim-option-dot"></div>CACHE POISONING
+        </div>
+        <div class="sim-option" data-vuln="rop" onclick="selectVuln(this)">
+          <div class="sim-option-dot"></div>ROP CHAIN
+        </div>
+        <div class="sim-option" data-vuln="race" onclick="selectVuln(this)">
+          <div class="sim-option-dot"></div>RACE CONDITION
+        </div>
+      </div>
+      <div class="sim-main">
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="t-dot" style="background:#ff5f57"></div>
+            <div class="t-dot" style="background:#ffbd2e"></div>
+            <div class="t-dot" style="background:#28ca42"></div>
+            <span class="t-path">sentinel@os-framework:~$</span>
+          </div>
+          <div id="terminal-output"></div>
+          <span class="cursor"></span>
+        </div>
+        <button class="run-btn" id="run-btn" onclick="runAttack()">
+          <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="3,1 14,8 3,15"/></svg>
+          RUN SIMULATION
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<div style="max-width:1200px;margin:0 auto;padding:0 48px 80px;">
+  <div class="arch-wrapper reveal">
+    <div class="arch-diagram">
+      <div class="arch-layer">
+        <div class="arch-label">Layer 0</div>
+        <div class="arch-name">INPUT LAYER</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-layer">
+        <div class="arch-label">Layer 1</div>
+        <div class="arch-name">DETECTION ENGINE</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-layer">
+        <div class="arch-label">Layer 2</div>
+        <div class="arch-name">ALERT SYSTEM</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-layer">
+        <div class="arch-label">Layer 3</div>
+        <div class="arch-name">MITIGATION ENGINE</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-layer">
+        <div class="arch-label">Layer 4</div>
+        <div class="arch-name">RECOVERY SYSTEM</div>
+      </div>
+    </div>
+  </div>
+</div>
